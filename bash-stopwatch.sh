@@ -7,10 +7,10 @@ function print()
     if [ $seconds -gt 3600 ]; then
         local hours=$((seconds/3600))
         local minutes=$((seconds/60))
-        print "\n$hours hours, $minutes minutes, and $seconds seconds elapsed"
+        printf "\n$hours hours, $minutes minutes, and $seconds seconds elapsed"
     elif [ $seconds -gt 60 ]; then
         local minutes=$((seconds/60))
-        print "\n$minutes minutes and $seconds seconds elapsed"
+        printf "\n$minutes minutes and $seconds seconds elapsed"
     else
         printf "\n$seconds seconds elapsed"
     fi
