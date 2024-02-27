@@ -7,8 +7,9 @@ function print()
     if [ $seconds -gt 3600 ]; then
         local hours=$((seconds / 3600))
         local minutes=$((seconds / 60))
+        local minutes_beyond=$((minutes % 60))
         local seconds_beyond=$((seconds % 60))
-        printf "\n$hours hours, $minutes minutes, and $seconds_beyond seconds elapsed"
+        printf "\n$hours hours, $minutes_beyond minutes, and $seconds_beyond seconds elapsed"
     elif [ $seconds -gt 60 ]; then
         local minutes=$((seconds / 60))
         local seconds_beyond=$((seconds % 60))
